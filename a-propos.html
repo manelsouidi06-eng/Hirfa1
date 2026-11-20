@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="HIRFA veut dire artisanat. Découvrez notre mission et nos valeurs.">
+  <title>À propos | HIRFA</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- En-tête et menu principal (identique sur toutes les pages) -->
+  <header class="entete">
+    <a href="index.html" class="logo"><img src="images/logo.png" alt="Logo HIRFA, artisanat tunisien"></a>
+    <button class="burger" id="burger" aria-label="Ouvrir le menu">Menu</button>
+    <nav class="menu" id="menu"><a href="index.html">Accueil</a><div class="deroulant"><a href="produits.html">Produits</a><button class="fleche" aria-label="Voir les catégories" aria-expanded="false">&#9662;</button><div class="sous-menu"><a href="poterie.html">Poterie et vaisselle</a><a href="vannerie.html">Vannerie et tressage</a><a href="cuivre.html">Cuivre et cuisine</a><a href="bois.html">Bois</a><a href="traditionnels.html">Produits traditionnels</a></div></div><a href="a-propos.html" class="actif">À propos</a><a href="contact.html">Contact</a><a href="panier.html" aria-label="Voir mon panier">Panier <span class="compteur" id="compteur">0</span></a><a href="compte.html" id="lien-compte">Compte</a></nav>
+  </header>
+  <main>
+    <section class="bloc texte">
+      <h1>À propos de HIRFA</h1>
+      <p>« Hirfa » veut dire métier, artisanat. Notre boutique en ligne, basée à Tunis, fait découvrir l'artisanat tunisien fait main à la diaspora, aux amateurs de décoration et à tous ceux qui cherchent un cadeau authentique.</p>
+      <h2>Notre mission</h2>
+      <p>Mettre en valeur les artisans tunisiens et leur savoir-faire, en vendant leurs créations en ligne avec une livraison sécurisée.</p>
+      <h2>Nos valeurs</h2>
+      <ul>
+        <li><strong>Authenticité</strong> : chaque produit est fait main.</li>
+        <li><strong>Histoire de l'artisan</strong> : nous racontons qui fabrique chaque pièce.</li>
+        <li><strong>Équité</strong> : une rémunération juste pour les artisans.</li>
+        <li><strong>Qualité</strong> : une sélection et un contrôle avant chaque envoi.</li>
+      </ul>
+      <h2>Comment nous travaillons</h2>
+      <p>Nous travaillons avec des artisans et des coopératives, nous photographions les produits, puis nous les expédions en Tunisie et à l'international. Une commande sur mesure est possible sur demande.</p>
+    </section>
+  </main>
+  <!-- Pied de page (identique sur toutes les pages) -->
+  <footer class="pied">
+    <p><strong>HIRFA</strong> – Artisanat tunisien fait main, Tunis</p>
+    <p>Tél. <a href="tel:+21671065332">71 065 332</a> – <a href="mailto:herfa@gmail.com">herfa@gmail.com</a> – Instagram @herfa</p>
+    <p>Catégories : <a href="poterie.html">Poterie et vaisselle</a> – <a href="vannerie.html">Vannerie et tressage</a> – <a href="cuivre.html">Cuivre et cuisine</a> – <a href="bois.html">Bois</a> – <a href="traditionnels.html">Produits traditionnels</a></p>
+    <p>© 2026 HIRFA. Tous droits réservés.</p>
+  </footer>
+  <!-- Ordre important : bibliothèque Supabase, connexion, fonctions, catalogue, puis script.js -->
+  <script defer src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+  <script defer src="supabase-client.js"></script>
+  <script defer src="supabase-shop.js"></script>
+  <script defer src="data.js"></script>
+  <script defer src="script.js"></script>
+</body>
+</html>

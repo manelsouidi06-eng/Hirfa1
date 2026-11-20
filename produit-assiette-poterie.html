@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Assiette en poterie peinte : Assiette de table ou murale, décor peint à la main. 35 TND. Artisanat tunisien fait main chez HIRFA, à Tunis.">
+  <title>Assiette en poterie peinte | HIRFA</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- En-tête et menu principal (identique sur toutes les pages) -->
+  <header class="entete">
+    <a href="index.html" class="logo"><img src="images/logo.png" alt="Logo HIRFA, artisanat tunisien"></a>
+    <button class="burger" id="burger" aria-label="Ouvrir le menu">Menu</button>
+    <nav class="menu" id="menu"><a href="index.html">Accueil</a><div class="deroulant"><a href="produits.html">Produits</a><button class="fleche" aria-label="Voir les catégories" aria-expanded="false">&#9662;</button><div class="sous-menu"><a href="poterie.html">Poterie et vaisselle</a><a href="vannerie.html">Vannerie et tressage</a><a href="cuivre.html">Cuivre et cuisine</a><a href="bois.html">Bois</a><a href="traditionnels.html">Produits traditionnels</a></div></div><a href="a-propos.html">À propos</a><a href="contact.html">Contact</a><a href="panier.html" aria-label="Voir mon panier">Panier <span class="compteur" id="compteur">0</span></a><a href="compte.html" id="lien-compte">Compte</a></nav>
+  </header>
+  <main>
+    <section class="bloc">
+      <!-- Fil d'Ariane -->
+      <nav class="ariane" aria-label="Fil d'Ariane"><a href="index.html">Accueil</a> &gt; <a href="produits.html">Produits</a> &gt; <a href="poterie.html">Poterie et vaisselle</a> &gt; <span aria-current="page">Assiette en poterie peinte</span></nav>
+      <div class="detail">
+        <img src="images/assiette-poterie-detail.jpg" alt="Assiette en poterie tunisienne peinte à la main">
+        <div>
+          <h1>Assiette en poterie peinte</h1>
+          <p class="prix">35 TND</p>
+          <p>Assiette de table ou murale, décor peint à la main.</p>
+          <h2>Caractéristiques</h2>
+          <ul><li>Terre cuite émaillée</li><li>décor peint à la main</li><li>diamètre environ 25 cm</li><li>chaque pièce est unique</li></ul>
+          <p class="note">Pièce artisanale : de petites différences font partie de son charme.</p>
+          <button class="bouton btn-ajout" data-id="assiette-poterie">Ajouter au panier</button>
+          <a class="lien" href="poterie.html">Retour à la catégorie</a>
+        </div>
+      </div>
+    </section>
+    <section class="bloc">
+      <h2>Dans la même catégorie</h2>
+      <div class="grille">
+      <article class="carte" data-cat="poterie">
+        <img src="images/tajine-terre-cuite.jpg" alt="Tajine tunisien en terre cuite avec couvercle conique" loading="lazy">
+        <div class="carte-txt"><h3>Tajine en terre cuite</h3><p class="prix">70 TND</p><p>Pour cuisiner ou servir, motifs traditionnels.</p><button class="bouton btn-ajout" data-id="tajine-terre-cuite">Ajouter au panier</button> <a class="lien" href="produit-vedette.html">Voir le détail</a></div>
+      </article>
+      </div>
+    </section>
+  </main>
+  <!-- Pied de page (identique sur toutes les pages) -->
+  <footer class="pied">
+    <p><strong>HIRFA</strong> – Artisanat tunisien fait main, Tunis</p>
+    <p>Tél. <a href="tel:+21671065332">71 065 332</a> – <a href="mailto:herfa@gmail.com">herfa@gmail.com</a> – Instagram @herfa</p>
+    <p>Catégories : <a href="poterie.html">Poterie et vaisselle</a> – <a href="vannerie.html">Vannerie et tressage</a> – <a href="cuivre.html">Cuivre et cuisine</a> – <a href="bois.html">Bois</a> – <a href="traditionnels.html">Produits traditionnels</a></p>
+    <p>© 2026 HIRFA. Tous droits réservés.</p>
+  </footer>
+  <!-- Ordre important : bibliothèque Supabase, connexion, fonctions, catalogue, puis script.js -->
+  <script defer src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+  <script defer src="supabase-client.js"></script>
+  <script defer src="supabase-shop.js"></script>
+  <script defer src="data.js"></script>
+  <script defer src="script.js"></script>
+</body>
+</html>

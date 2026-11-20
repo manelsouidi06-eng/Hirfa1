@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Les 10 produits artisanaux tunisiens de HIRFA, classés par catégorie : poterie, vannerie, cuivre, bois et produits traditionnels.">
+  <title>Produits | HIRFA</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- En-tête et menu principal (identique sur toutes les pages) -->
+  <header class="entete">
+    <a href="index.html" class="logo"><img src="images/logo.png" alt="Logo HIRFA, artisanat tunisien"></a>
+    <button class="burger" id="burger" aria-label="Ouvrir le menu">Menu</button>
+    <nav class="menu" id="menu"><a href="index.html">Accueil</a><div class="deroulant"><a href="produits.html" class="actif">Produits</a><button class="fleche" aria-label="Voir les catégories" aria-expanded="false">&#9662;</button><div class="sous-menu"><a href="poterie.html">Poterie et vaisselle</a><a href="vannerie.html">Vannerie et tressage</a><a href="cuivre.html">Cuivre et cuisine</a><a href="bois.html">Bois</a><a href="traditionnels.html">Produits traditionnels</a></div></div><a href="a-propos.html">À propos</a><a href="contact.html">Contact</a><a href="panier.html" aria-label="Voir mon panier">Panier <span class="compteur" id="compteur">0</span></a><a href="compte.html" id="lien-compte">Compte</a></nav>
+  </header>
+  <main>
+    <section class="bloc">
+      <h1>Nos produits</h1>
+      <p>Tous les prix sont en dinars tunisiens (TND).</p>
+      <h2>Explorer par catégorie</h2>
+      <div class="cats">
+        <a class="cat-carte" href="poterie.html">
+          <img src="images/tajine-terre-cuite.jpg" alt="Tajine tunisien en terre cuite peint" loading="lazy">
+          <div><h3>Poterie et vaisselle</h3><p>Assiette peinte et tajine en terre cuite.</p><span class="btn-faux">Découvrir</span></div>
+        </a>
+        <a class="cat-carte" href="vannerie.html">
+          <img src="images/couffin-tresse.jpg" alt="Panier tunisien tressé avec anses" loading="lazy">
+          <div><h3>Vannerie et tressage</h3><p>Couffin et corbeille tressés à la main.</p><span class="btn-faux">Découvrir</span></div>
+        </a>
+        <a class="cat-carte" href="cuivre.html">
+          <img src="images/plateau-cuivre.jpg" alt="Plateau rond en cuivre ciselé" loading="lazy">
+          <div><h3>Cuivre et cuisine</h3><p>Casserole et plateau en cuivre.</p><span class="btn-faux">Découvrir</span></div>
+        </a>
+        <a class="cat-carte" href="bois.html">
+          <img src="images/planche-bois.jpg" alt="Planche à découper en bois d'olivier" loading="lazy">
+          <div><h3>Bois</h3><p>Planche à découper et plat en bois.</p><span class="btn-faux">Découvrir</span></div>
+        </a>
+        <a class="cat-carte" href="traditionnels.html">
+          <img src="images/jarre-huile.jpg" alt="Jarre artisanale d'huile d'olive" loading="lazy">
+          <div><h3>Produits traditionnels</h3><p>Jarre d'huile d'olive et bougies.</p><span class="btn-faux">Découvrir</span></div>
+        </a>
+      </div>
+      <h2>Tous les produits</h2>
+      <!-- Boutons de filtre par catégorie -->
+      <div class="filtres"><button class="filtre actif" data-cat="tous">Tous</button><button class="filtre" data-cat="poterie">Poterie et vaisselle</button><button class="filtre" data-cat="vannerie">Vannerie et tressage</button><button class="filtre" data-cat="cuivre">Cuivre et cuisine</button><button class="filtre" data-cat="bois">Bois</button><button class="filtre" data-cat="traditionnel">Produits traditionnels</button></div>
+      <div class="grille" id="liste">
+      <article class="carte" data-cat="poterie">
+        <img src="images/assiette-poterie.jpg" alt="Assiette en poterie tunisienne peinte à la main" loading="lazy">
+        <div class="carte-txt"><h3>Assiette en poterie peinte</h3><p class="prix">35 TND</p><p>Assiette de table ou murale, décor peint à la main.</p><p class="det">Terre cuite émaillée, décor peint à la main, diamètre environ 25 cm, chaque pièce est unique.</p><button class="bouton btn-ajout" data-id="assiette-poterie">Ajouter au panier</button> <a class="lien" href="produit-assiette-poterie.html">Voir le détail</a></div>
+      </article>
+      <article class="carte" data-cat="poterie">
+        <img src="images/tajine-terre-cuite.jpg" alt="Tajine tunisien en terre cuite avec couvercle conique" loading="lazy">
+        <div class="carte-txt"><h3>Tajine en terre cuite</h3><p class="prix">70 TND</p><p>Pour cuisiner ou servir, motifs traditionnels.</p><p class="det">Terre cuite, décor traditionnel peint à la main, couvercle conique, diamètre environ 30 cm.</p><button class="bouton btn-ajout" data-id="tajine-terre-cuite">Ajouter au panier</button> <a class="lien" href="produit-vedette.html">Voir le détail</a></div>
+      </article>
+      <article class="carte" data-cat="vannerie">
+        <img src="images/couffin-tresse.jpg" alt="Couffin tunisien tressé à la main avec deux anses" loading="lazy">
+        <div class="carte-txt"><h3>Couffin tressé</h3><p class="prix">50 TND</p><p>Panier souple à anses, pour les courses ou le rangement.</p><p class="det">Fibres naturelles, tressé à la main, deux anses, léger et résistant.</p><button class="bouton btn-ajout" data-id="couffin-tresse">Ajouter au panier</button> <a class="lien" href="produit-couffin-tresse.html">Voir le détail</a></div>
+      </article>
+      <article class="carte" data-cat="vannerie">
+        <img src="images/corbeille-jonc.jpg" alt="Corbeille en jonc tressé à la main" loading="lazy">
+        <div class="carte-txt"><h3>Corbeille en jonc tressé</h3><p class="prix">40 TND</p><p>Corbeille décorative ou de rangement, tressée à la main.</p><p class="det">Jonc naturel, tressé à la main, diamètre environ 30 cm.</p><button class="bouton btn-ajout" data-id="corbeille-jonc">Ajouter au panier</button> <a class="lien" href="produit-corbeille-jonc.html">Voir le détail</a></div>
+      </article>
+      <article class="carte" data-cat="cuivre">
+        <img src="images/casserole-cuivre.jpg" alt="Casserole traditionnelle en cuivre martelé" loading="lazy">
+        <div class="carte-txt"><h3>Casserole en cuivre</h3><p class="prix">110 TND</p><p>Ustensile de cuisine traditionnel en cuivre.</p><p class="det">Cuivre martelé, poignée solide, diamètre environ 18 cm.</p><button class="bouton btn-ajout" data-id="casserole-cuivre">Ajouter au panier</button> <a class="lien" href="produit-casserole-cuivre.html">Voir le détail</a></div>
+      </article>
+      <article class="carte" data-cat="cuivre">
+        <img src="images/plateau-cuivre.jpg" alt="Plateau rond en cuivre ciselé" loading="lazy">
+        <div class="carte-txt"><h3>Plateau en cuivre ciselé</h3><p class="prix">95 TND</p><p>Pour le thé ou la décoration, gravé à la main.</p><p class="det">Cuivre gravé à la main, diamètre environ 35 cm.</p><button class="bouton btn-ajout" data-id="plateau-cuivre">Ajouter au panier</button> <a class="lien" href="produit-plateau-cuivre.html">Voir le détail</a></div>
+      </article>
+      <article class="carte" data-cat="bois">
+        <img src="images/planche-bois.jpg" alt="Planche à découper artisanale en bois naturel" loading="lazy">
+        <div class="carte-txt"><h3>Planche à découper en bois</h3><p class="prix">45 TND</p><p>Bois naturel, pour couper et servir.</p><p class="det">Bois naturel façonné à la main, longueur environ 35 cm, lavage à la main conseillé.</p><button class="bouton btn-ajout" data-id="planche-bois">Ajouter au panier</button> <a class="lien" href="produit-planche-bois.html">Voir le détail</a></div>
+      </article>
+      <article class="carte" data-cat="bois">
+        <img src="images/plat-bois.jpg" alt="Plat artisanal en bois massif" loading="lazy">
+        <div class="carte-txt"><h3>Verre ou plat en bois</h3><p class="prix">30 TND</p><p>Pièce de table façonnée dans le bois.</p><p class="det">Bois massif façonné à la main, chaque pièce est unique, lavage à la main conseillé.</p><button class="bouton btn-ajout" data-id="plat-bois">Ajouter au panier</button> <a class="lien" href="produit-plat-bois.html">Voir le détail</a></div>
+      </article>
+      <article class="carte" data-cat="traditionnel">
+        <img src="images/jarre-huile.jpg" alt="Jarre artisanale d'huile d'olive tunisienne" loading="lazy">
+        <div class="carte-txt"><h3>Jarre d'huile d'olive traditionnelle</h3><p class="prix">40 TND</p><p>Huile d'olive en jarre artisanale.</p><p class="det">Huile d'olive tunisienne, jarre artisanale, contenance environ 1 litre.</p><button class="bouton btn-ajout" data-id="jarre-huile">Ajouter au panier</button> <a class="lien" href="produit-jarre-huile.html">Voir le détail</a></div>
+      </article>
+      <article class="carte" data-cat="traditionnel">
+        <img src="images/bougies.jpg" alt="Bougies artisanales faites à la main" loading="lazy">
+        <div class="carte-txt"><h3>Bougies artisanales</h3><p class="prix">20 TND</p><p>Bougies faites à la main, parfumées.</p><p class="det">Cire, fabrication artisanale, plusieurs parfums possibles.</p><button class="bouton btn-ajout" data-id="bougies">Ajouter au panier</button> <a class="lien" href="produit-bougies.html">Voir le détail</a></div>
+      </article>
+      </div>
+    </section>
+  </main>
+  <!-- Pied de page (identique sur toutes les pages) -->
+  <footer class="pied">
+    <p><strong>HIRFA</strong> – Artisanat tunisien fait main, Tunis</p>
+    <p>Tél. <a href="tel:+21671065332">71 065 332</a> – <a href="mailto:herfa@gmail.com">herfa@gmail.com</a> – Instagram @herfa</p>
+    <p>Catégories : <a href="poterie.html">Poterie et vaisselle</a> – <a href="vannerie.html">Vannerie et tressage</a> – <a href="cuivre.html">Cuivre et cuisine</a> – <a href="bois.html">Bois</a> – <a href="traditionnels.html">Produits traditionnels</a></p>
+    <p>© 2026 HIRFA. Tous droits réservés.</p>
+  </footer>
+  <!-- Ordre important : bibliothèque Supabase, connexion, fonctions, catalogue, puis script.js -->
+  <script defer src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+  <script defer src="supabase-client.js"></script>
+  <script defer src="supabase-shop.js"></script>
+  <script defer src="data.js"></script>
+  <script defer src="script.js"></script>
+</body>
+</html>
